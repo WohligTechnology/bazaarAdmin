@@ -1,21 +1,48 @@
 <div class="page">
-    <h2 class="title">
-</h2>
+   <h2 class="title">
+   </h2>
 
-    <div class="row">
-        <div class="col-md-12">
-            <section class="panel panel-default" style="border-radius:0px;">
-                <div class="panel-heading panel-hdr"><span class="glyphicon glyphicon-th mr5"></span>Edit Blocks
-                </div>
-                <div class="panel-body">
-                    <form name="form_constraints" class="form-validation" data-ng-submit="submitForm()">
-                        <div class='form-group'><label>Name</label><input type='text' class='form-control' ng-model = 'blocks.name' placeholder='Name' > </div><div class='form-group'><label>Image</label><input type='text' class='form-control' ng-model = 'blocks.image' placeholder='Image' > </div><div class='form-group'><label for='exampleInputEmail1'>Content</label><textarea class='form-control' ng-model = 'blocks.content' placeholder='Content' ></textarea></div><div class='form-group'><label>Link</label><input type='text' class='form-control' ng-model = 'blocks.link' placeholder='Link' > </div><!--Add New Tags-->
-                        <div class="text-center" style="padding-bottom:20px;">
-                            <button type="submit" class="btn btn-primary all-btn">Submit</button>
+   <div class="row">
+      <div class="col-md-12">
+         <section class="panel panel-default" style="border-radius:0px;">
+            <div class="panel-heading panel-hdr">
+               <span class="glyphicon glyphicon-th mr5"></span>Edit Blocks
+            </div>
+            <div class="panel-body">
+               <form name="form_constraints" class="form-validation" data-ng-submit="submitForm()">
+                  <div class='form-group'>
+                     <label>Name</label>
+                     <input type='text' class='form-control' ng-model='blocks.name' placeholder='Name'> </div>
+                     <div class="form-group">
+                        <label for="exampleInputEmail1">Image</label>
+                        <div class="scroll-x" ng-if="blocks.image">
+                           <div class="img-box">
+                              <img ng-src="{{blocks.image|uploadpath}}" width="200" height="150">
+                              <button type="button" ng-click="removeimage();" class="btn btn-danger close-btn"><i class="glyphicon glyphicon-trash"></i>
+                              </button>
+                           </div>
                         </div>
-                    </form>
-                </div>
-            </section>
-        </div>
-    </div>
+                        <div class="upload-div">
+                           <div ng-init="httpMethod = 'POST';howToSend = 1;"></div>
+                           <div class="upload-buttons">
+                              <input type="file" name="file" ng-file-select="onFileSelect($files)" onclick="this.value=null">
+                           </div>
+                        </div>
+                     </div>
+                  <div class='form-group'>
+                     <label for='exampleInputEmail1'>Content</label>
+                     <textarea class='form-control' ng-model='blocks.content' placeholder='Content'></textarea>
+                  </div>
+                  <div class='form-group'>
+                     <label>Link</label>
+                     <input type='text' class='form-control' ng-model='blocks.link' placeholder='Link'> </div>
+                  <!--Add New Tags-->
+                  <div class="text-center" style="padding-bottom:20px;">
+                     <button type="submit" class="btn btn-primary all-btn">Submit</button>
+                  </div>
+               </form>
+            </div>
+         </section>
+      </div>
+   </div>
 </div>

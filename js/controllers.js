@@ -47,10 +47,10 @@ phonecatControllers.controller('login', function ($scope, TemplateService, Navig
 });
 phonecatControllers.controller('headerctrl', function ($scope, TemplateService, $location, $routeParams, NavigationService) {
 	$scope.template = TemplateService;
-	//  if (!$.jStorage.get("adminuser")) {
-	//    $location.url("/login");
-	//
-	//  }
+	 if (!$.jStorage.get("adminuser")) {
+	   $location.url("/login");
+	
+	 }
 });
 
 phonecatControllers.controller('createorder', function ($scope, TemplateService, NavigationService, ngDialog, $routeParams, $location) {

@@ -3,7 +3,8 @@ var selectedData = [];
 var abc = {};
 var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ngDialog', 'angularFileUpload', 'ui.select', 'ngSanitize']);
 // window.uploadUrl = 'http://localhost:1337/uploadfile/upload';
-window.uploadUrl = 'http://vignesh.com:82/uploadfile/upload';
+// window.uploadUrl = 'http://vignesh.com:82/uploadfile/upload';
+window.uploadUrl = 'http://tagboss.wohlig.com/uploadfile/upload';
 phonecatControllers.controller('home', function ($scope, TemplateService, NavigationService, $routeParams, $location) {
 	$scope.template = TemplateService;
 	$scope.menutitle = NavigationService.makeactive("Dashboard");

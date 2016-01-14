@@ -2,8 +2,9 @@ var uploadres = [];
 var selectedData = [];
 var abc = {};
 var phonecatControllers = angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ngDialog', 'angularFileUpload', 'ui.select', 'ngSanitize']);
-// window.uploadUrl = 'http://localhost:1337/uploadfile/upload';
+
 window.uploadUrl = 'http://tagboss.wohlig.com/uploadfile/upload';
+
 phonecatControllers.controller('home', function ($scope, TemplateService, NavigationService, $routeParams, $location) {
 	$scope.template = TemplateService;
 	$scope.menutitle = NavigationService.makeactive("Dashboard");
@@ -46,10 +47,10 @@ phonecatControllers.controller('login', function ($scope, TemplateService, Navig
 });
 phonecatControllers.controller('headerctrl', function ($scope, TemplateService, $location, $routeParams, NavigationService) {
 	$scope.template = TemplateService;
-	//  if (!$.jStorage.get("adminuser")) {
-	//    $location.url("/login");
-	//
-	//  }
+	 if (!$.jStorage.get("adminuser")) {
+	   $location.url("/login");
+	
+	 }
 });
 
 phonecatControllers.controller('createorder', function ($scope, TemplateService, NavigationService, ngDialog, $routeParams, $location) {

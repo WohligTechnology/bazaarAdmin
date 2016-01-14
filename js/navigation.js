@@ -1,5 +1,5 @@
-// var adminurl = "http://localhost:1337/";
 var adminurl = "http://tagboss.wohlig.com/";
+
 var adminlogin = {
 	"username": "admin@admin.com",
 	"password": "admin123"

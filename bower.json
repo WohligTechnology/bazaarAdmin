@@ -1,0 +1,20 @@
+{
+  "name": "bazaarAdmin",
+  "version": "0.0.1",
+  "homepage": "https://github.com/WohligTechnology/bazaarAdmin",
+  "authors": [
+    "Dhaval Gala <dhaval.gala59@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-sanitize": "~1.4.8",
+    "ui-select": "angular-ui-select#~0.13.2"
+  }
+}

@@ -1,4 +1,4 @@
-var adminurl = "http://tagboss.wohlig.com/";
+var adminurl = "http://tagboss.wohlig.com:1337/";
 
 var adminlogin = {
 	"username": "admin@admin.com",

@@ -26,7 +26,8 @@
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/lodash.min.js"></script>
     <script src="bower_components/angular-ui-select/dist/select.js"></script>
-
+    <script src="bower_components/tinymce-dist/tinymce.js"></script>
+    <script src="bower_components/angular-ui-tinymce/src/tinymce.js"></script>
 
 
     <script src="lib/js/jstorage.js"></script>
